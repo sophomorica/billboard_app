@@ -1,0 +1,22 @@
+<%= form_with(model: billboard, local: true, class: "field") do |f| %>
+
+ 
+  
+
+
+<div class="field">
+  <p class="control has-icons-left has-icons-right">
+    <%= f.label :Enter %>
+    <%= f.text_field :name, required: true, placeholder: "Billboard Title", class: "input" %>
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </p>
+</div>
+<%= f.submit nil, class: "ui button green" %>
+<% end %>
+
+</div>
