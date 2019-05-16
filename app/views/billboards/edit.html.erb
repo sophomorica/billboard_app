@@ -1,2 +1,15 @@
-<h1>Billboards#edit</h1>
-<p>Find me in app/views/billboards/edit.html.erb</p>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Billboards
+      </h1>
+      <h2 class="subtitle">
+        Edit Billboard
+      </h2>
+    </div>
+  </div>
+</section>
+<%= render "form", billboard: @billboard%>
+<%= link_to "Show", billboards_path(@billboard), class: "button"%>
+<%= link_to "Back", billboards_path, class: "button"%>

@@ -7,10 +7,22 @@
         Billboards
       </h1>
       <h2 class="subtitle">
-        Hero subtitle
+        <hr />
       </h2>
     </div>
   </div>
 </section>
-<p>Find me in app/views/billboards/index.html.erb</p>
+<ul>
+<%@billboards.each do |b|%>
+<li>
+<%=b.name%>
+</li>
+<%end%>
+</ul>
+
+
+
+<%= link_to "New Billboard", new_billboard_path, class: "button"%>
+<%#=link_to "Edit Billboard", edit_billboard_path(@billboard), class: "button"%>
 </div>
+<%#@names.each do |name|%>
