@@ -14,7 +14,7 @@
 </section>
 
 <%@artists.each do |a|%>
-<h3 class = "suatitle"><%=a.name%></h3>
+<h3 class = "suatitle"><%=a.full_name%></h3>
 <div class = "button-div" style = "display:flex;">
 
 <%=link_to "Show", artist_path(a)%> |

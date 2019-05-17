@@ -1,2 +1,21 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Artist
+      </h1>
+      <h2 class="subtitle">
+        Create New Artist
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<%= render "form", artist: @artist%>
+
+
+<button class = "button">
+<%= link_to "Back", artists_path%>
+</button>
+
