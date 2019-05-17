@@ -10,6 +10,12 @@
 </button>
 <button class = "button"><%= link_to "Edit", edit_artist_path(@artist)%>
 </button>
+
+<% @artist.songs.each do |song| %>
+  <%= render '/songs/song', { song: song } %>
+<% end %>
+<%= link_to 'Add Song', new_artist_song_path(@artist), class: "button is-priority" %>
+<br />
 </div>
 
 

@@ -1,2 +1,21 @@
-<h1>Songs#new</h1>
-<p>Find me in app/views/songs/new.html.erb</p>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Song
+      </h1>
+      <h2 class="subtitle">
+        Add a Song to <%=@artist.first_name%>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<%= render "form", song: [@artist, @song]%>
+
+
+<button class = "button">
+<%= link_to "Back", artists_path%>
+</button>
+
