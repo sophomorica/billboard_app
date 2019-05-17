@@ -12,13 +12,23 @@
     </div>
   </div>
 </section>
-<ul>
+
 <%@billboards.each do |b|%>
-<li>
-<%=b.name%>
-</li>
+<h3 class = "subtitle"><%=b.name%></h3>
+<div class = "button-div" style = "display:flex;">
+
+<%=link_to "Show", billboard_path(b)%> |
+
+
+
+<%=link_to "Edit", edit_billboard_path(b)%> |
+
+
+<%=link_to "Delete", billboard_path(b), method: :delete%>
+
+</div>
 <%end%>
-</ul>
+
 
 
 

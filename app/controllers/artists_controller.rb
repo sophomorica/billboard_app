@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  
+  
   def index
   end
 
@@ -10,4 +12,5 @@ class ArtistsController < ApplicationController
 
   def new
   end
+  
 end
