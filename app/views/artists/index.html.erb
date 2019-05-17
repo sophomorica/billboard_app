@@ -1,2 +1,37 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+<div class = "container">
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Artists
+      </h1>
+      <h2 class="subtitle">
+        <hr />
+      </h2>
+    </div>
+  </div>
+</section>
+
+<%@artists.each do |a|%>
+<h3 class = "suatitle"><%=a.full_name%></h3>
+<div class = "button-div" style = "display:flex;">
+
+<%=link_to "Show", artist_path(a)%> |
+
+
+
+<%=link_to "Edit", edit_artist_path(a)%> |
+
+
+<%=link_to "Delete", artist_path(a), method: :delete%>
+
+</div>
+<%end%>
+
+
+
+
+<%= link_to "New Artist", new_artist_path, class: "button"%>
+
+</div>

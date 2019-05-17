@@ -1,0 +1,16 @@
+
+<h1>Add A Song</h1>
+
+
+<%= form_with(model: song, local: true, class: "field") do |f| %>
+<div class="field">
+  <p >
+    <%= f.label :Fill_out %>
+    <%= f.text_field :name, required: true, placeholder: "Song Name", class: "input" %>
+    
+   
+  </p>
+</div>
+    <%= f.check_box :on_billboard, class: "field" %>
+<%= f.submit nil, class: "ui button is-primary" %>
+<% end %>

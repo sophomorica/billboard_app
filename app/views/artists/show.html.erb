@@ -1,2 +1,21 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<h1 style = "text-align:center; font-size:50px;"><%=@artist.full_name%></h1>
+<h2 style = "text-align:center; font-size:30px;">
+<%=@artist.genre%>
+</h2>
+
+
+<div class = "button-div" style = "display:flex; justify-content:center;">
+<button class = "button">
+<%= link_to "Back", artists_path%>
+</button>
+<button class = "button"><%= link_to "Edit", edit_artist_path(@artist)%>
+</button>
+
+<% @artist.songs.each do |song| %>
+  <%= render '/songs/song', { song: song } %>
+<% end %>
+<%= link_to 'Add Song', new_artist_song_path(@artist), class: "button is-priority" %>
+<br />
+</div>
+
+
