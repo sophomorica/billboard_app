@@ -1,6 +1,10 @@
 <h1 style = "text-align:center; font-size:50px;">Billboard's <%=@billboard.name%></h1>
 
 
+
+<%= render "/songs/song_index"%>
+
+
 <div class = "button-div" style = "display:flex; justify-content:center;">
 <button class = "button">
 <%= link_to "Back", billboards_path%>
@@ -8,5 +12,7 @@
 <button class = "button"><%= link_to "Edit", edit_billboard_path(@billboard)%>
 </button>
 </div>
+
+
 
 

@@ -1,2 +1,15 @@
-<h1>Songs#edit</h1>
-<p>Find me in app/views/songs/edit.html.erb</p>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+       SONG
+      </h1>
+      <h2 class="subtitle">
+        By <%@artist.full_name%>
+      </h2>
+    </div>
+  </div>
+</section>
+<%= render "/songs/form", song: @song%>
+<%=link_to "Show", artist_path(@artist), class: "button"%>
+<%= link_to "Back", artist_path(@artist), class: "button"%>
