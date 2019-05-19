@@ -15,12 +15,12 @@
     <div class="navbar-start">
      
 
-      <a class="navbar-item">
+      <%# <a class="navbar-item">
         Artists
-      </a>
-      <a class="navbar-item">
-        Songs
-      </a>
+      </a> %>
+      <%= link_to "Artists", artists_path, class: "navbar-item"%>
+      <%= link_to "Billboards", billboards_path, class: "navbar-item"%>
+      
 
     </div>
 

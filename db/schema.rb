@@ -1,4 +1,5 @@
-ActiveRecord::Schema.define(version: 2019_05_17_194958) do
+
+ActiveRecord::Schema.define(version: 2019_05_19_012527) do
 
   enable_extension "plpgsql"
 
@@ -22,8 +23,11 @@ ActiveRecord::Schema.define(version: 2019_05_17_194958) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "on_billboard"
+    t.bigint "billboard_id"
     t.index ["artist_id"], name: "index_songs_on_artist_id"
+    t.index ["billboard_id"], name: "index_songs_on_billboard_id"
   end
 
   add_foreign_key "songs", "artists"
+  add_foreign_key "songs", "billboards"
 end
