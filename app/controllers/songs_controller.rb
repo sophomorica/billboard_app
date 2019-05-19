@@ -1,10 +1,14 @@
 class SongsController < ApplicationController
-  before_action :set_artist
+  before_action :set_artist, except: [:index]
+  before_action :set_billboard, only: [:index]
   def index
+    #@artists = Artist.all(params[:artist_id])
     @songs = Song.all
   end
 
- 
+  def show
+    
+  end
   
 
   def edit
@@ -29,5 +33,8 @@ class SongsController < ApplicationController
   end
   def song_params
     params.require(:song).permit(:on_billboard, :name)
+  end
+  def set_billboard
+    @billboard = Billboard.find(params[:billboard_id])
   end
 end

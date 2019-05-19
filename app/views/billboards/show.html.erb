@@ -2,12 +2,15 @@
 
 
 
-<%= render "/songs/song_index"%>
+<%#= render "/songs/song_index"%>
 
 
 <div class = "button-div" style = "display:flex; justify-content:center;">
 <button class = "button">
 <%= link_to "Back", billboards_path%>
+</button>
+<button class = "button">
+<%= link_to "Song Index", billboard_songs_path(@billboard)%>
 </button>
 <button class = "button"><%= link_to "Edit", edit_billboard_path(@billboard)%>
 </button>
