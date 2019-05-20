@@ -42,12 +42,12 @@ class SongsController < ApplicationController
     @artist = Artist.find(params[:artist_id])
   end
   def song_params
-    params.require(:song).permit(:on_billboard, :name, :genre)
+    params.require(:song).permit(:on_billboard, :name, :genre, :billboard_id)
   end
   def set_song
     @song = Song.find(params[:id])
   end
   def set_billboard
-    @billboard = Billboard.find(params[:billboard_id])
+    @billboard = Billboard.find(params[1])
   end
 end
