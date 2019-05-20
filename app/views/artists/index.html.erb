@@ -14,7 +14,7 @@
 </section>
 
 <%@artists.each do |a|%>
-<h3 class = "suatitle"><%=a.full_name%></h3>
+<h3 class = "suatitle"><strong><%=a.full_name%></strong></h3>
 <div class = "button-div" style = "display:flex;">
 
 <%=link_to "Show", artist_path(a)%> |
@@ -27,6 +27,8 @@
 <%=link_to "Delete", artist_path(a), method: :delete%>
 
 </div>
+<hr />
+<br />
 <%end%>
 
 

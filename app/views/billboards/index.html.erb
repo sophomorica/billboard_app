@@ -14,7 +14,7 @@
 </section>
 
 <%@billboards.each do |b|%>
-<h3 class = "subtitle"><%=b.name%></h3>
+<h3 class = "subtitle"><strong><%=b.name%></strong></h3>
 <div class = "button-div" style = "display:flex;">
 
 <%=link_to "Show", billboard_path(b)%> |
@@ -27,6 +27,8 @@
 <%=link_to "Delete", billboard_path(b), method: :delete%>
 
 </div>
+<hr />
+<br />
 <%end%>
 
 
