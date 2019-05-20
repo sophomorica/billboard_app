@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_artist
+  before_action :set_artist, except: [:index]
   before_action :set_billboard, only: [:index]
   def index
     #@artists = Artist.all(params[:artist_id])
@@ -48,6 +48,6 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
   end
   def set_billboard
-    @billboard = Billboard.find(params[1])
+    @billboard = Billboard.find(params[:billboard_id])
   end
 end
