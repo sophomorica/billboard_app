@@ -2,7 +2,7 @@
 <p>Find me in app/views/songs/index.html.erb</p>
 
 <% @songs.each do |s|%>
-<% if s.on_billboard ==true%>
+<% if s.on_billboard ==true && s.genre == "rock"%>
 <%=s.name%>
 <%end%>
 <%end%>

@@ -1,7 +1,5 @@
-<h1>Hello</h1>
-
-<%= @billboard.songs.each do |s|%>
-
-<%= s.name%>
-
+<% song.each do |s|%>
+<% if s.on_billboard ==true && s.genre == "rock"%>
+<%=s.name%>
+<%end%>
 <%end%>

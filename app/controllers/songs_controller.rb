@@ -1,6 +1,7 @@
 class SongsController < ApplicationController
   before_action :set_artist, except: [:index]
   before_action :set_billboard, only: [:index]
+ # before_action :set_song, only: [:destroy]
   def index
     #@artists = Artist.all(params[:artist_id])
     @songs = Song.all
@@ -12,6 +13,12 @@ class SongsController < ApplicationController
   
 
   def edit
+    # @song = @artist.songs.update(song_params)
+    # if @song.save
+    #   redirect_to @artist
+    # else
+    #   render :edit
+    # end
   end
 
   def new
@@ -34,6 +41,9 @@ class SongsController < ApplicationController
     else
       render :edit
     end
+  end
+  def destroy
+  
   end
  
 
