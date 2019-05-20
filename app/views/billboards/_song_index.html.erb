@@ -1,0 +1,7 @@
+<ol>
+<% @songs.each do |s|%>
+<% if s.on_billboard ==true%>
+<li><%=s.name%></li>
+<%end%>
+<%end%>
+</ol>

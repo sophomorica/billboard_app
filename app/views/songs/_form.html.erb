@@ -2,7 +2,7 @@
 <h1>Add A Song</h1>
 
 
-<%= form_with(model: song, local: true, class: "field") do |f| %>
+<%= form_with(model: [@artist, @song], local: true, class: "field") do |f| %>
 <div class="field">
   <p >
     <%= f.label :Fill_out %>

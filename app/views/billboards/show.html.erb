@@ -8,7 +8,7 @@
 
 <%#= render "/songs/song_index", {billboard: billboard, song: song}%>
 
-
+<%#= render "song_index", song: @song%>
 <div class = "button-div" style = "display:flex; justify-content:center;">
 <button class = "button">
 <%= link_to "Show Songs", billboard_songs_path(@billboard)%>

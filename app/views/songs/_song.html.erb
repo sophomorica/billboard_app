@@ -1,5 +1,5 @@
 <hr />
 <p><strong><em><%= song.name %></em></strong></p>
-<button class = "button"><%=link_to "Edit Song", edit_artist_song_path(@artist)%></button>
-<%= link_to 'Delete Song', artist_song_path(@artist), method: :delete, class: "button is-priority" %>
+<button class = "button"><%=link_to "Edit Song", edit_artist_song_path(@artist,song.id)%></button>
+<%= link_to 'Delete Song', artist_song_path(@artist, song.id), method: :delete, class: "button is-priority" %>
 <hr/>

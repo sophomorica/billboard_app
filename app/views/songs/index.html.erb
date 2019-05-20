@@ -4,7 +4,7 @@
 
 <ol>
 <% @songs.each do |s|%>
-<% if s.on_billboard ==true%>
+<% if s.on_billboard ==true && s.genre =="rock"%>
 <li><%=s.name%></li>
 <%end%>
 <%end%>
