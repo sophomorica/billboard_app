@@ -1,8 +1,11 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1><strong>Songs on Billboard</strong></h1>
+<hr />
+<br />
 
+<ol>
 <% @songs.each do |s|%>
-<% if s.on_billboard ==true && s.genre == "rock"%>
-<%=s.name%>
+<% if s.on_billboard ==true%>
+<li><%=s.name%></li>
 <%end%>
 <%end%>
+</ol>
